@@ -12,7 +12,7 @@
 
 import { NativeModules, Platform, processColor } from "react-native";
 
-const { ActionSheetManager, ShareModule } = NativeModules;
+const { ActionSheetManager, RNSimpleShare } = NativeModules;
 
 type Content =
   | { title?: string, message: string }
@@ -77,7 +77,7 @@ class Share {
       //   !content.title || typeof content.title === "string",
       //   "Invalid title: title should be a string."
       // );
-      return ShareModule.share(content, options.dialogTitle);
+      return RNSimpleShare.share(content, options.dialogTitle);
     } else if (Platform.OS === "ios") {
       return new Promise((resolve, reject) => {
         ActionSheetManager.showShareActionSheetWithOptions(
