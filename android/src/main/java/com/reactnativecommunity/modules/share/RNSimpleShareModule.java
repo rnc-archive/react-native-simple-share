@@ -22,13 +22,13 @@ import com.facebook.react.module.annotations.ReactModule;
  * Intent module. Launch other activities or open URLs.
  */
 @ReactModule(name = "RNSimpleShare")
-public class RNSimpleShare extends ReactContextBaseJavaModule {
+public class RNSimpleShareModule extends ReactContextBaseJavaModule {
 
   /* package */ static final String ACTION_SHARED = "sharedAction";
   /* package */ static final String ERROR_INVALID_CONTENT = "E_INVALID_CONTENT";
   /* package */ static final String ERROR_UNABLE_TO_OPEN_DIALOG = "E_UNABLE_TO_OPEN_DIALOG";
 
-  public RNSimpleShare(ReactApplicationContext reactContext) {
+  public RNSimpleShareModule(ReactApplicationContext reactContext) {
     super(reactContext);
   }
 

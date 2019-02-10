@@ -3931,7 +3931,7 @@ react-is@^16.6.3:
 
 "react-native-simple-share@https://github.com/Ansalibrahim/react-native-simple-share#feature/share-implementation":
   version "1.0.0"
-  resolved "https://github.com/Ansalibrahim/react-native-simple-share#67179b31ebe35e1455bb5f4ed175812981680518"
+  resolved "https://github.com/Ansalibrahim/react-native-simple-share#a9bfe0ff48f1da44e433471a6fe0b470c2b218f7"
 
 react-native@0.58.4:
   version "0.58.4"
