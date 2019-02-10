@@ -6,45 +6,49 @@
  * @flow
  * @lint-ignore-every XPLATJSCOPYRIGHT1
  */
-
 import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View } from "react-native";
+import { View, Button } from "react-native";
+import SimpleShare from "react-native-simple-share";
 
-const instructions = Platform.select({
-  ios: "Press Cmd+R to reload,\n" + "Cmd+D or shake for dev menu",
-  android:
-    "Double tap R on your keyboard to reload,\n" +
-    "Shake or press menu button for dev menu"
-});
+export default class ShareExample extends Component {
+  onShare = async () => {
+    try {
+      const result = await SimpleShare.share({
+        message:
+          "React Native | A framework for building native apps using React"
+      });
 
-type Props = {};
-export default class App extends Component<Props> {
+      if (result.action === SimpleShare.sharedAction) {
+        if (result.activityType) {
+          // shared with activity type of result.activityType
+          console.log("result", result);
+        } else {
+          // shared
+          console.log("result", result);
+        }
+      } else if (result.action === SimpleShare.dismissedAction) {
+        // dismissed
+        console.log("dismissed");
+      }
+    } catch (error) {
+      console.log("error", error, error.message);
+    }
+  };
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+      <View
+        style={{
+          backgroundColor: "white",
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <Button title="Share" onPress={this.onShare}>
+          Share
+        </Button>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF"
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: "center",
-    margin: 10
-  },
-  instructions: {
-    textAlign: "center",
-    color: "#333333",
-    marginBottom: 5
-  }
-});
