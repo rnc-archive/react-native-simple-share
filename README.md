@@ -1,13 +1,5 @@
 # react-native-simple-share
 
-[//]: # ## Getting started
-
-[//]: # `$ npm install react-native-simple-share --save`
-
-[//]: # ### Mostly automatic installation
-
-[//]: # `$ react-native link react-native-simple-share`
-
 ### Manual installation
 
 #### Android
