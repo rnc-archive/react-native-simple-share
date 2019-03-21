@@ -1,6 +1,6 @@
 {
   "name": "@react-native-community/react-native-simple-share",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A minimal share package for react-native",
   "main": "index.js",
   "scripts": {
