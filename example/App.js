@@ -1,27 +1,11 @@
-# react-native-simple-share
-
-### Manual installation
-
-#### Android
-
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-
-- Add `import com.reactnativecommunity.modules.share.RNSimpleSharePackage;` to the imports at the top of the file
-- Add `new RNSimpleSharePackage()` to the list returned by the `getPackages()` method
-
-2. Append the following lines to `android/settings.gradle`:
-   ```
-   include ':react-native-simple-share'
-   project(':react-native-simple-share').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-simple-share/android')
-   ```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-   ```
-     compile project(':react-native-simple-share')
-   ```
-
-## Usage
-
-```javascript
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ * @lint-ignore-every XPLATJSCOPYRIGHT1
+ */
 import React, { Component } from "react";
 import { View, Button } from "react-native";
 import SimpleShare from "react-native-simple-share";
@@ -47,7 +31,7 @@ export default class ShareExample extends Component {
         console.log("dismissed");
       }
     } catch (error) {
-      console.log("error", error.message);
+      console.log("error", error, error.message);
     }
   };
 
@@ -68,4 +52,3 @@ export default class ShareExample extends Component {
     );
   }
 }
-```

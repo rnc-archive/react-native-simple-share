@@ -1,0 +1,22 @@
+{
+  "name": "@react-native-community/react-native-simple-share",
+  "version": "1.0.0",
+  "description": "A minimal share package for react-native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "share",
+    "simple-share",
+    "react-antive-community"
+  ],
+  "repository": "react-native-community/react-native-simple-share",
+  "author": "ansalibrahim",
+  "license": "",
+  "peerDependencies": {
+    "react-native": "^0.41.2",
+    "invariant": "^2.2.4"
+  }
+}
